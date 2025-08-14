@@ -16,3 +16,10 @@ models = {
     'Naive Bayes': GaussianNB(),
     'KNN': KNeighborsClassifier(n_neighbors=3)
 }
+
+test_person = [[68, 130, 9]]
+
+for name, model in models.items():
+    model.fit(x, y)
+    prediction = model.predict(test_person)
+    print(f"{name}: {prediction[0]}")
